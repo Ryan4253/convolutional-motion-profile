@@ -1,3 +1,4 @@
+#pragma once
 #include <queue>
 
 template<typename T>
@@ -31,6 +32,14 @@ class MovingAverage {
         }
 
         return sum / q.size();
+    }
+
+    std::size_t getSize() const{
+        return q.size();
+    }
+
+    std::size_t getCapacity() const{
+        return size;
     }
 
 
